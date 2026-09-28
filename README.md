@@ -6,6 +6,31 @@
 
 ---
 
+## Thông tin học viên
+
+- **Họ và tên:** Le Thanh Tinh
+- **MSSV:** 02449
+- **Lớp:** L3B
+
+## Cách chạy nhanh
+
+Chạy các lệnh sau bằng PowerShell từ thư mục gốc của repository:
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+$env:PYTHONUTF8 = "1"
+python src/main.py --part 2
+python src/main.py --part 3
+python src/main.py --part 4
+pytest tests/smoke -q
+pytest tests/public -q
+python scripts/grade.py --submission-dir . --out outputs/grade_report.json
+```
+
+API key được lưu trong `.env` ở máy local. Không commit hoặc chia sẻ file `.env`.
+
+---
+
 ## Thời lượng
 
 | Phần | Thời gian |
